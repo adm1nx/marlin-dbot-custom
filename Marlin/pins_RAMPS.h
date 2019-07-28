@@ -58,12 +58,12 @@
 #ifdef IS_RAMPS_13
   #define SERVO0_PIN        7   // RAMPS_13 // Will conflict with BTN_EN2 on LCD_I2C_VIKI
 #else
-  #define SERVO0_PIN       11
+  #define SERVO0_PIN       5 // RRD Fan 
 #endif
-#define SERVO1_PIN          6
-#define SERVO2_PIN          5 // MOVE FAN HERE
+#define SERVO1_PIN          4 //RRD Fan
+#define SERVO2_PIN          11 //bltouch
 #ifndef SERVO3_PIN
-  #define SERVO3_PIN        4 // MOVE_FAN_HERE
+  #define SERVO3_PIN        6 // MOVE_FAN_HERE
 #endif
 
 //
@@ -236,6 +236,7 @@
 #endif
 
 #define HEATER_0_PIN       RAMPS_D10_PIN
+#define HEATER_1_PIN       RAMPS_D9_PIN
 
 #if ENABLED(IS_RAMPS_EFB)                      // Hotend, Fan, Bed
   #define HEATER_BED_PIN   RAMPS_D8_PIN
@@ -279,7 +280,7 @@
 
 // define digital pin 4 for the filament runout sensor. Use the RAMPS 1.4 digital input 4 on the servos connector
 #ifndef FIL_RUNOUT_PIN
-  #define FIL_RUNOUT_PIN    4
+  #define FIL_RUNOUT_PIN    6
 #endif
 
 #ifndef PS_ON_PIN
