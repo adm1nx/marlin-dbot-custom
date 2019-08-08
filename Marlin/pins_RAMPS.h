@@ -58,10 +58,10 @@
 #ifdef IS_RAMPS_13
   #define SERVO0_PIN        7   // RAMPS_13 // Will conflict with BTN_EN2 on LCD_I2C_VIKI
 #else
-  #define SERVO0_PIN       5 // RRD Fan 
+  #define SERVO0_PIN       11// bltouch
 #endif
-#define SERVO1_PIN          4 //RRD Fan
-#define SERVO2_PIN          11 //bltouch
+#define SERVO1_PIN          5 //RRD Fan
+#define SERVO2_PIN          4 //RRD Fan
 #ifndef SERVO3_PIN
   #define SERVO3_PIN        6 // MOVE_FAN_HERE
 #endif
@@ -262,7 +262,7 @@
   #elif ENABLED(IS_RAMPS_EEF) || ENABLED(IS_RAMPS_SF) // Hotend, Hotend, Fan or Spindle, Fan
     #define FAN_PIN        RAMPS_D8_PIN
   #elif ENABLED(IS_RAMPS_EEB)                         // Hotend, Hotend, Bed
-    #define FAN_PIN         4   // IO pin. Buffer needed
+    #define FAN_PIN         5   // IO pin. Buffer needed
   #else                                               // Non-specific are "EFB" (i.e., "EFBF" or "EFBE")
     #define FAN_PIN        RAMPS_D9_PIN
   #endif
